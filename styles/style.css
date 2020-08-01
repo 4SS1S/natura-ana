@@ -1,0 +1,51 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+body {
+    background: linear-gradient(90deg, #b3861a, #b35327, #303030);
+}
+
+#natura-logo {
+    position: fixed;
+    z-index: -1;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    width: 50%;
+}
+
+.container,
+.card {
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .container,
+    .card {
+        width: 120%;
+    }
+}
+
+.card-header {
+    background-color: #6d606090;
+    backdrop-filter: blur(10px);
+
+    color: #fff;
+}
+
+.card-body {
+    background-color: #dddddd80;
+    backdrop-filter: blur(10px);
+}
