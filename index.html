@@ -4,18 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./favicon.ico" />
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css" />
+
     <title>Natura</title>
 </head>
 
 <body>
 
     <div class="container">
-        Agora Vai:
+        <img src="assets/images/logo.png" id="natura-logo" />
         <div class="card">
             <div class="card-header">
+                Preço do Produto
                 <div class="input-group mb-3">
                     <span class="input-group-text">R$</span>
-                    <input type="text" autofocus placeholder="Preço do Produto" class="form-control" id="preco-produto">
+                    <input type="text" value="0,00" autofocus placeholder="Preço do Produto" class="form-control"
+                        id="preco-produto">
+                </div>
+                Porcentagem a ser Aplicada
+                <div class="input-group mb-3">
+                    <br />
+                    <span class="input-group-text">%</span>
+                    <input type="number" value="20" autofocus placeholder="Porcentagem" class="form-control"
+                        id="porcentagem">
                 </div>
             </div>
             <div class="card-body">
@@ -34,52 +51,7 @@
         </div>
     </div>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
-    </script>
-
-    <script>
-        let precoProdutoForm = document.querySelector("#preco-produto")
-
-        precoProdutoForm.addEventListener('input', e => {
-            // precoProdutoForm.value =
-            const newVal = convertToMoney(e.target.value)
-            precoProdutoForm.value = newVal
-
-            preco(newVal)
-        })
-
-        function convertToMoney(valor) {
-            let value = valor.replace(/[\D]+/g, '');
-
-            // return value.toLocaleString("pt-BR", {
-            //     style: "currency",
-            //     currency: "BRL",
-            //     minimumFractionDigits: 2
-            // })
-
-            var tmp = value + '';
-            tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
-            if (tmp.length > 6)
-                tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
-            return tmp;
-        }
-
-        function preco(valor) {
-            let _v = valor.replace('.', '');
-            _v = parseFloat(_v)
-
-            let precoNaLojaForm = document.querySelector("#preco-produto-na-loja")
-            let comicao = document.querySelector("#comicao")
-            precoNaLojaForm.value = _v - (_v * 0.2)
-            comicao.value = (_v * 0.2)
-        }
-    </script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
