@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./favicon.ico" />
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <title>Natura</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="assets/images/logo.png" id="natura-logo" />
+        <div class="card">
+            <div class="card-header">
+                Preço do Produto
+                <div class="input-group mb-3">
+                    <span class="input-group-text">R$</span>
+                    <input type="text" value="0,00" autofocus placeholder="Preço do Produto" class="form-control"
+                        id="preco-produto">
+                </div>
+                Porcentagem a ser Aplicada
+                <div class="input-group mb-3">
+                    <br />
+                    <span class="input-group-text">%</span>
+                    <input type="number" value="20" autofocus placeholder="Porcentagem" class="form-control"
+                        id="porcentagem">
+                </div>
+            </div>
+            <div class="card-body">
+                Valor na Loja
+                <div class="input-group mb-3">
+                    <span class="input-group-text">R$</span>
+                    <input type="text" disabled placeholder="Preço do Produto na Loja" class="form-control"
+                        id="preco-produto-na-loja">
+                </div>
+                Comição:
+                <div class="input-group mb-3">
+                    <span class="input-group-text">R$</span>
+                    <input type="text" disabled placeholder="Comição" class="form-control" id="comicao">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
